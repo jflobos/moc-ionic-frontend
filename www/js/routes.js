@@ -27,6 +27,16 @@ angular.module('app')
     }
   })
 
+  .state('tab.courses', {
+    url: '/courses',
+    views:{
+      'tab-courses': {
+        templateUrl: "js/courses/courses.html",
+        controller: 'CoursesCtrl as vm'
+      }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
