@@ -1,10 +1,10 @@
-<ion-view view-title="Courses">
+<ion-view view-title="{{vm.course.title}}">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="course in vm.courses" type="item-text-wrap" href="#/tab/courses/{{course.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="lesson in vm.lessons" type="item-text-wrap" href="#/tab/lessons/{{lesson.id}}">
         <img ng-src="">
-        <h2>{{course.title}}</h2>
-        <p>{{course.description}}</p>
+        <h2>{{lesson.title}}</h2>
+        <p>{{lesson.description}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(chat)">

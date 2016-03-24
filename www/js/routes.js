@@ -36,7 +36,25 @@ angular.module('app')
       }
     }
   })
+  .state('tab.course-detail', {
+    url: '/courses/:courseId',
+    views: {
+      'tab-courses':{
+        templateUrl: 'js/courses/course-detail.html',
+        controller: 'CourseDetailCtrl as vm'
+      }
+    }
+  })
 
+  .state('tab.lesson', {
+    url: '/lessons/:lessonId',
+    view: {
+      'tabs-courses': {
+        templateUrl: 'js/lessons/lesson-detail.html',
+        controller: 'LessonDetailCtrl as vm'
+      }
+    }
+  })
   .state('tab.chats', {
       url: '/chats',
       views: {

@@ -1,0 +1,28 @@
+<ion-view view-title="{{vm.lesson.title}}">
+  <ion-content>
+    <ion-list>
+      <h2>Videos</h2>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="video in vm.lessons.videos" type="item-text-wrap" href="#/tab/lesson/{{lesson.id}}">
+        <img ng-src="">
+        <h2>{{video.title}}</h2>
+        <p>{{video.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+      <h2>Documents</h2>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="document in vm.lesson.documents" type="item-text-wrap" href="#/tab/lesson/{{lesson.id}}">
+        <img ng-src="">
+        <h2>{{document.title}}</h2>
+        <p>{{document.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
